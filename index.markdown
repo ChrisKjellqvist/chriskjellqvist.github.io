@@ -64,7 +64,7 @@ really simple task because it was easy to do by hand. I was given
 the following loop and told that this case needs to be regularly
 optimized.
 
-```
+```C++
 for(unsigned x = 0; x < x_e; ++x)
   for(unsigned y = 0; y < y_e; ++y)
     *(mem_location++) = 42;`
@@ -93,18 +93,18 @@ happen.
 The system that I worked most on was transactional memory. 
 
 ### Transactional Memory
-> The idea of a transaction is simple. Imagine you're moving your
-> furniture from one house to another. The moving people arrive, pack up
-> your favorite recliner, and leave. Sometime during the day, you get a
-> back ache so you drive home for lunch to relax on your recliner, but
-> find it gone. Well, if it wasn't there, it must be at your new house -
-> so you drive there. But it also wasn't there! You throw up your hands
-> and segfault. The movers stopped to get lunch on the way...
+    The idea of a transaction is simple. Imagine you're moving your
+    furniture from one house to another. The moving people arrive, pack up
+    your favorite recliner, and leave. Sometime during the day, you get a
+    back ache so you drive home for lunch to relax on your recliner, but
+    find it gone. Well, if it wasn't there, it must be at your new house -
+    so you drive there. But it also wasn't there! You throw up your hands
+    and segfault. The movers stopped to get lunch on the way...
 
-> The concept of movers is that the move things, having nothing to do
-> with timing. In the same way, your computer can take time to make
-> changes (like moving data), but transactional memory gives the program
-> the impression that your furniture is being moved instantaneously.
+    The concept of movers is that the move things, having nothing to do
+    with timing. In the same way, your computer can take time to make
+    changes (like moving data), but transactional memory gives the program
+    the impression that your furniture is being moved instantaneously.
 
 My contribution was in the topic of static separation of 'transactional'
 variables. I added a program feature that allowed programmers to tag
@@ -112,7 +112,7 @@ variables that were transactional. If they were used outside of a
 transaction, then we would know. This could help prevent bugs that lead
 to race conditions for instance. Here's a bit of code to demonstrate...
 
-```
+```C++
 // You imply this will only be used in transactions
 TX_PTR(int) my_int = ...;     
 // a while later
@@ -126,7 +126,7 @@ transactional {
 
 And while this is all happening a different thread is doing the
 following.
-```
+```C++
 int a = *my_int; // line 1
 *my_int = a * 7; // line 2
 ```
