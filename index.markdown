@@ -4,13 +4,15 @@
 
 layout: home
 ---
+
 Hi, I'm Chris, and this is a bit about me. My research interests are
 primarily in the scope of future computing architectures. Right now,
 I'm working on persistent memory key-value stores, but I think analog
 systems and those with customizable hardware accelerators are really
 neat as well.
- I also have a bit of experience with compilers. I think that fits
-in really well with this interest because nobody expects programmers to
+
+ I also have experience with compilers, which fits
+in well with this interest because nobody expects programmers to
 actually directly interface with these futuristic components, it will be
 compilers doing the heavy lifting.
 
@@ -24,7 +26,8 @@ University of Rochester, May 2020
 - 3.84 Major GPA, 3.69 Cumulative GPA
 
 ## Coursework
-
+- Future: Topics in Quantum Computing (295), Honors Thesis,
+  Undergraduate Problem Seminar), Performance Art
 - CS: 3 Semesters of Independent Research,
       Design of Efficient Algorithms (282), Computational Models of
       Perception and Cognition (229), Low Level Parallel Programming
@@ -36,8 +39,7 @@ University of Rochester, May 2020
       (172), Discrete Math (MTH 150), Cryptography (Uppsala)
 - ECE: Advanced Computer Archecture (ECE 201), Logic Design (ECE 112),
        Accelerating Systems with Programmable Logic Components (Uppsala)
-- Art: Introduction to Painting (112), Introduction to Drawing (111),
-       Performance Art (Future) 
+- Art: Introduction to Painting, Introduction to Drawing
 - History: Modern Japan (HIS145), Latin America through Soccer (HIS154), 
            Postwar Europe (HIS 128)
 
@@ -182,7 +184,8 @@ system and a persistent allocator (both awaiting publication).
 During the beginning of my work with the systems group, I worked mostly
 with hardware transactional memory and graph algorithms.
 
-## System Developer Intern, Dewire, Sundsvall, Sweden, Summer 2017
+## System Developer Intern, [Dewire][dlink], Sundsvall, Sweden, Summer 2017
+[dlink]: https://www.dewire.com/
 Briefly, I helped fill in missing tests in their automated testing suite
 for their Android applications. My biggest contribution was definitely
 in developing a testing service so that tests could be run faster.
@@ -233,13 +236,14 @@ computing systems.
 
 For my cryptography class, I [presented][UppsalaPrez2] a [paper][PPaper] that 
 was _way_ out of my comfort zone. I had never read such complex math
-before, but by the end of it, I think I was a bit more educated in the
+before, but by the end of it, I think I was a bit more acclimated to the
 area. While I thought that my presentation would be a disaster, I was
 surprised that people seemed interested afterwards and actually asked
-some questions. 
+some questions. In addition to the presentation, I wrote a report that
+summarized the research in more technical detail.  
 
 For my Low Level Parallel Programming course, we did not present a
-paper, but instead we [presented][ResultPrezy] the results of a
+paper, but instead we [presented][ResultPrez] the results of a
 course-long project. This project was given to us as a naive, sequential
 implementation of a simulation. Over the course of the semester, I
 transformed it into a lean, mean simulation that used CUDA, OpenMP, and
@@ -247,12 +251,13 @@ SIMD instructions to accelerate the computation.
 
 ## Fall 2018
 
-- Advanced Computer Architecture TA - This felt like a serious job. I
+- Advanced Computer Architecture TA - I really enjoyed this position. I
   was responsible for grading a lot more individually, developing
   projects for the students and my input was considered in assigning
-  grades. The audience for office hours was much difference than my
+  grades. The audience for office hours was much different than my
   earlier classes because the material itself was much more challenging
-  and oriented more towards grad students.
+  and oriented more towards grad students. This has been my favorite
+  class to TA.
 
 ## Spring 2018 
 
