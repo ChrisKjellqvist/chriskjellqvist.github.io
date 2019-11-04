@@ -64,9 +64,11 @@ really simple task because it was easy to do by hand. I was given
 the following loop and told that this case needs to be regularly
 optimized.
 
-    for(unsigned x = 0; x < x_e; ++x)
-      for(unsigned y = 0; y < y_e; ++y)
-        *(mem_location++) = 42;`
+```
+for(unsigned x = 0; x < x_e; ++x)
+  for(unsigned y = 0; y < y_e; ++y)
+    *(mem_location++) = 42;`
+```
 
 It turns out that there were many more corner cases than I imagined. I
 learned a ton from this experience, from code style, to git, to
@@ -91,24 +93,52 @@ happen.
 The system that I worked most on was transactional memory. 
 
 ### Transactional Memory
-    The idea of a transaction is simple. Imagine you're moving your
-    furniture from one house to another. The moving people arrive, pack up
-    your favorite recliner, and leave. Sometime during the day, you get a
-    back ache so you drive home for lunch to relax on your recliner, but
-    find it gone. Well, if it wasn't there, it must be at your new house -
-    so you drive there. But it also wasn't there! You throw up your hands
-    and segfault. The movers stopped to get lunch on the way...
-  
-    The concept of movers is that the move things, having nothing to do
-    with timing. In the same way, your computer can take time to make
-    changes (like moving data), but transactional memory gives the program
-    the impression that your furniture is being moved instantaneously.
+> The idea of a transaction is simple. Imagine you're moving your
+> furniture from one house to another. The moving people arrive, pack up
+> your favorite recliner, and leave. Sometime during the day, you get a
+> back ache so you drive home for lunch to relax on your recliner, but
+> find it gone. Well, if it wasn't there, it must be at your new house -
+> so you drive there. But it also wasn't there! You throw up your hands
+> and segfault. The movers stopped to get lunch on the way...
+
+> The concept of movers is that the move things, having nothing to do
+> with timing. In the same way, your computer can take time to make
+> changes (like moving data), but transactional memory gives the program
+> the impression that your furniture is being moved instantaneously.
 
 My contribution was in the topic of static separation of 'transactional'
 variables. I added a program feature that allowed programmers to tag
 variables that were transactional. If they were used outside of a
 transaction, then we would know. This could help prevent bugs that lead
-to race conditions for instance.
+to race conditions for instance. Here's a bit of code to demonstrate...
+
+```
+// You imply this will only be used in transactions
+TX_PTR(int) my_int = ...;     
+// a while later
+transactional {
+  if (my_int != nullptr)
+    *my_int = 24;
+  else
+    my_int = malloc(...)
+}
+```
+
+And while this is all happening a different thread is doing the
+following.
+```
+int a = *my_int; // line 1
+*my_int = a * 7; // line 2
+```
+
+The tagging of 'my\_int' implies that any changes to `my\_int`, and any
+operations that rely on a read from it all happen in an instant. While
+the first code block keeps this promise by putting the code in a
+transactional block, the second code block makes non transactional
+changes. Between line 1 and 2, a transaction from the first code block
+could have occurred. Then, when line 2 occurs, it is writing a stale
+value read from line 1. Static separation would preven this from
+happening by detection at compile time. 
 
 During my time at Lehigh, I also took part in the Pittsburgh
 Supercomputing Center's XSEDE HPC summer bootcamp. During the week long
