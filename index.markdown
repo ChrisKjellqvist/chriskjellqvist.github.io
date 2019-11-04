@@ -4,6 +4,7 @@
 
 layout: home
 ---
+Education
 
 ## Details
 
@@ -40,6 +41,7 @@ University of Rochester, May 2020
   was involved in constructing one of the wooden hulls.
 
 # Programming Experience
+
 ## Compiler R&D Intern, Cray Inc, Summer 2019
 Briefly, I Improved Loop Idiom optimization in Cray's LLVM based
 compiler by writing my own pass and augmenting existing passes to
@@ -108,6 +110,7 @@ unable to contribute because I left long before the actual publications.
 I also gave a [presentation](/assets/presentation.pdf) while I was there.
 
 ## Researcher, University of Rochester, Fall 2018 to Present
+
 ### Current Project
 I am currently working on accelerating
 [Memcached](https://www.memcached.org) using a variety of technologies
@@ -152,7 +155,9 @@ I've been told, my slave is still running and hasn't been touched since
 I left! 
 
 #Teaching Experience
+
 ##Fall 2019
+
 - Programming Language Design & Implementation - This is the first time
   I've led a workshop for a class. It's been much different than just
   grading and holding office hours. Certainly much harder, but I've
@@ -162,6 +167,7 @@ I left!
   material.
 
 ##Fall 2018
+
 - Advanced Computer Architecture TA - This felt like a serious job. I
   was responsible for grading a lot more individually, developing
   projects for the students and my input was considered in assigning
@@ -170,8 +176,10 @@ I left!
   and oriented more towards grad students.
 
 ## Spring 2018 
+
 - Computer Organization TA
 - Computation and Formal System TA
 
 ## Fall 2017
+
 - Computation and Formal System TA
