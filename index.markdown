@@ -122,6 +122,8 @@ transactional {
   else
     my_int = malloc(...)
 }
+// We imply that the comparison of `my_int`, the read, and assignment
+// all appear to happen instantaneously.
 ```
 
 And while this is all happening a different thread is doing the
