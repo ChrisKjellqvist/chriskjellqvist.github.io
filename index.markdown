@@ -5,7 +5,6 @@
 layout: home
 ---
 
-# Education
 ## Details
 
 University of Rochester, May 2020
@@ -27,20 +26,20 @@ University of Rochester, May 2020
        Performance Art (Future) 
 
 ## Extracurriculars
-       - For the last 3 years, I have been researching with the CS
-         Systems group, more on that below. 
-       - I currently work with the UR Computational Fluid Dynamics group
-         to assist in writing user-defined functions for their
-         simulations. 
-       - From Fall 2016 to Fall 2018, I ran for the Univeristy's Cross
-         Country and Track teams. Unfortunately, a serious injury
-         prevented me from continuing.
-       - Intermittently from Fall 2016 to the Spring of 2018, I was a
-         member of the Solar Splash team. This team competes yearly to
-         build a solar-powered boat for endurance and sprint races. I
-         was involved in constructing one of the wooden hulls.
+- For the last 3 years, I have been researching with the CS
+  Systems group, more on that below. 
+- I currently work with the UR Computational Fluid Dynamics group
+  to assist in writing user-defined functions for their
+  simulations. 
+- From Fall 2016 to Fall 2018, I ran for the Univeristy's Cross
+  Country and Track teams. Unfortunately, a serious injury
+  prevented me from continuing.
+- Intermittently from Fall 2016 to the Spring of 2018, I was a
+  member of the Solar Splash team. This team competes yearly to
+  build a solar-powered boat for endurance and sprint races. I
+  was involved in constructing one of the wooden hulls.
 
-# Experience
+# Programming Experience
 ## Compiler R&D Intern, Cray Inc, Summer 2019
 Briefly, I Improved Loop Idiom optimization in Cray's LLVM based
 compiler by writing my own pass and augmenting existing passes to
@@ -78,18 +77,18 @@ happen.
 The system that I worked most on was transactional memory. 
 
 ### Transactional Memory
-  The idea of a transaction is simple. Imagine you're moving your
-  furniture from one house to another. The moving people arrive, pack up
-  your favorite recliner, and leave. Sometime during the day, you get a
-  back ache so you drive home for lunch to relax on your recliner, but
-  find it gone. Well, if it wasn't there, it must be at your new house -
-  so you drive there. But it also wasn't there! You throw up your hands
-  and segfault. The movers stopped to get lunch on the way...
+    The idea of a transaction is simple. Imagine you're moving your
+    furniture from one house to another. The moving people arrive, pack up
+    your favorite recliner, and leave. Sometime during the day, you get a
+    back ache so you drive home for lunch to relax on your recliner, but
+    find it gone. Well, if it wasn't there, it must be at your new house -
+    so you drive there. But it also wasn't there! You throw up your hands
+    and segfault. The movers stopped to get lunch on the way...
   
-  The concept of movers is that the move things, having nothing to do
-  with timing. In the same way, your computer can take time to make
-  changes (like moving data), but transactional memory gives the program
-  the impression that your furniture is being moved instantaneously.
+    The concept of movers is that the move things, having nothing to do
+    with timing. In the same way, your computer can take time to make
+    changes (like moving data), but transactional memory gives the program
+    the impression that your furniture is being moved instantaneously.
 
 My contribution was in the topic of static separation of 'transactional'
 variables. I added a program feature that allowed programmers to tag
@@ -102,9 +101,13 @@ Supercomputing Center's XSEDE HPC summer bootcamp. During the week long
 ordeal, I learned OpenMP, OpenACC, and MPI and got some experience
 working on a supercomputer. 
 
-[My Presentation](/assets/presentation.pdf).
+While the work of the PhD student eventually [got
+published](https://dl.acm.org/ft_gateway.cfm?id=3328796&type=pdf), I was
+unable to contribute because I left long before the actual publications.
 
-## Researcher, University of Rochester, Fall 2017 to Present
+I also gave a [presentation](/assets/presentation.pdf) while I was there.
+
+## Researcher, University of Rochester, Fall 2018 to Present
 ### Current Project
 I am currently working on accelerating
 [Memcached](https://www.memcached.org) using a variety of technologies
@@ -117,4 +120,58 @@ I studied abroad) and have continued work on it this semester as well.
 We also intend on making memcached persistent using a persistent STM
 system and a persistent allocator (both awaiting publication).
 
-###  
+### Past Project
+During the beginning of my work with the systems group, I worked mostly
+with hardware transactional memory and graph algorithms.
+
+## System Developer Intern, Dewire, Sundsvall, Sweden, Summer 2017
+Briefly, I helped fill in missing tests in their automated testing suite
+for their Android applications. My biggest contribution was definitely
+in developing a testing service so that tests could be run faster.
+
+This was both my first real job (if you don't count camp counselor), and
+my first time developing with any expectation of quality or performance.
+it was a really great experience where I met people I still keep in
+touch with when I visit my grandparents. 
+
+I won't mention much of the test automation because it was all quite dry
+and standard. The challenging part of the summer was when I had to make
+the testing robot. The intent was to be able to have a testing slave
+that would be capable of running all the tests on all of the connected
+devices simultaneously. We used many devices for tests because they were
+had differing screen sizes and OS versions. One problem is that some
+tests **couldn't** run simultaneously while some couldn't. Additionally,
+users needed a unique key at runtime.
+
+My solution involved making a small server on the testing device that
+each device first queried for an ID. The server also served to
+coordinate tests such that tests that could be run simultaneously could,
+and tests that needed to run alone were held behind a lock on the
+server. I was proud of my work and it seemed to work well. From what
+I've been told, my slave is still running and hasn't been touched since
+I left! 
+
+#Teaching Experience
+##Fall 2019
+- Programming Language Design & Implementation - This is the first time
+  I've led a workshop for a class. It's been much different than just
+  grading and holding office hours. Certainly much harder, but I've
+  learned a lot more
+- Volunteer Tutor - Twice a week I hold office hours for any class I've
+  ever taken. This is a challenge because of the sheer breadth of the
+  material.
+
+##Fall 2018
+- Advanced Computer Architecture TA - This felt like a serious job. I
+  was responsible for grading a lot more individually, developing
+  projects for the students and my input was considered in assigning
+  grades. The audience for office hours was much difference than my
+  earlier classes because the material itself was much more challenging
+  and oriented more towards grad students.
+
+## Spring 2018 
+- Computer Organization TA
+- Computation and Formal System TA
+
+## Fall 2017
+- Computation and Formal System TA
