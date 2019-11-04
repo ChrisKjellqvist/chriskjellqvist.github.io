@@ -85,8 +85,8 @@ built into LLVM that allowed me to work much more effectively and much
 more idiomatically (Alias Analysis, Scalar Evolution, etc). By the end
 of the Summer, I surprised myself by how much I felt I had improved. 
 
-I presented a [poster](CrayPoster) of my work at the Intern fair
-at the end of the Summer and [again](URPoster) at another poster fair for
+I presented a [poster][CrayPoster] of my work at the Intern fair
+at the end of the Summer and [again][URPoster] at another poster fair for
 UR's Computer Science open house.
 ## Intern, Intelligent and Scalable Systems Research Experience for Undergrads (REU), Lehigh University, Summer 2018
 
@@ -160,17 +160,17 @@ Supercomputing Center's XSEDE HPC summer bootcamp. During the week long
 ordeal, I learned OpenMP, OpenACC, and MPI and got some experience
 working on a supercomputer. 
 
-While the work of the PhD student eventually [got published](PanteaLink), I was
+While the work of the PhD student eventually [got published][PanteaLink], I was
 unable to contribute because I left long before the actual publications.
 
-I also gave a [presentation](LehighPrez) while I was there.
+I also gave a [presentation][LehighPrez] while I was there.
 
 ## Researcher, University of Rochester, Fall 2018 to Present
 
 ### Current Project
-I am currently working on accelerating [Memcached](MemcachedLink) using a 
+I am currently working on accelerating [Memcached][MemcachedLink] using a 
 variety of technologies that my group is developing. The first of which is 
-[Hodor](HodorLink),
+[Hodor][HodorLink],
  a mechanism meant to securely provide intra-process communications 
  without the useof the OS.
 I began this project last Fall (I did not do this in the Spring because
@@ -227,11 +227,11 @@ I was not in Rochester during the Spring of 2019, as I was studying
 abroad in Uppsala, Sweden at the University of Uppsala. One of my
 favorate things I noticed about the classes there is that in _every_
 class I had to give a presentation. For my FPGA course, I 
-[presented](UppsalaPrez1) a [paper](IpekPaper) by a UR faculty member,
+[presented][UppsalaPrez1] a [paper][IpekPaper] by a UR faculty member,
 Engin Ipek. This paper really contributed to my interest in analog
 computing systems. 
 
-For my cryptography class, I [presented](UppsalaPrez2) a [paper](PPaper) that 
+For my cryptography class, I [presented][UppsalaPrez2] a [paper][PPaper] that 
 was _way_ out of my comfort zone. I had never read such complex math
 before, but by the end of it, I think I was a bit more educated in the
 area. While I thought that my presentation would be a disaster, I was
@@ -239,7 +239,7 @@ surprised that people seemed interested afterwards and actually asked
 some questions. 
 
 For my Low Level Parallel Programming course, we did not present a
-paper, but instead we [presented](ResultPrezy) the results of a
+paper, but instead we [presented][ResultPrezy] the results of a
 course-long project. This project was given to us as a naive, sequential
 implementation of a simulation. Over the course of the semester, I
 transformed it into a lean, mean simulation that used CUDA, OpenMP, and
