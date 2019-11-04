@@ -4,11 +4,11 @@
 
 layout: home
 ---
-## Education
+# Education
 University of Rochester, May 2020
 - Honors B.S. in Computer Science
 - 3.84 Major GPA, 3.69 Cumulative GPA
-### Coursework
+## Coursework
 - CS: Design of Efficient Algorithms (282), Computational Models of
       Perception and Cognition (229), Low Level Parallel Programming
       (Uppsala), PLDI (254), Operating Systems (256), Artificial
@@ -20,7 +20,7 @@ University of Rochester, May 2020
 - ECE: Advanced Computer Archecture (ECE 201), Logic Design (ECE 112)
 - Art: Introduction to Painting (112), Introduction to Drawing (111),
        Performance Art (Future) 
-### Extracurriculars
+## Extracurriculars
        - From Fall 2016 to Fall 2018, I ran for the Univeristy's Cross
          Country and Track teams. Unfortunately, a serious injury
          prevented me from continuing.
@@ -29,8 +29,8 @@ University of Rochester, May 2020
          build a solar-powered boat for endurance and sprint races. I
          was involved in constructing one of the wooden hulls.
 
-## Experience
-### Compiler R&D Intern, Cray Inc, Summer 2019
+# Experience
+## Compiler R&D Intern, Cray Inc, Summer 2019
 Briefly, I Improved Loop Idiom optimization in Cray's LLVM based
 compiler by writing my own pass and augmenting existing passes to
 recognize more complex memset, memcpy, and memmove idioms.
@@ -49,5 +49,5 @@ learned a ton from this experience, from code style, to git, to
 presentation skills. I presented a poster of my work at the Intern fair
 at the end of the Summer and presented it at another poster fair for
 UR's Computer Science open house. \[[Cray
-Poster](/assets/CrayPoster.jpg)\] \[[UR Poster](/assets/URPoster.pdf)\]
+Poster](/assets/CrayPoster.jpg)\] \[[UR Poster](/assets/URPoster.jpg)\]
 
