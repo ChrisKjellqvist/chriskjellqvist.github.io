@@ -5,10 +5,14 @@
 layout: home
 ---
 # Education
+## Details
+
 University of Rochester, May 2020
 - Honors B.S. in Computer Science
 - 3.84 Major GPA, 3.69 Cumulative GPA
+
 ## Coursework
+
 - CS: Design of Efficient Algorithms (282), Computational Models of
       Perception and Cognition (229), Low Level Parallel Programming
       (Uppsala), PLDI (254), Operating Systems (256), Artificial
@@ -20,7 +24,9 @@ University of Rochester, May 2020
 - ECE: Advanced Computer Archecture (ECE 201), Logic Design (ECE 112)
 - Art: Introduction to Painting (112), Introduction to Drawing (111),
        Performance Art (Future) 
+
 ## Extracurriculars
+
        - From Fall 2016 to Fall 2018, I ran for the Univeristy's Cross
          Country and Track teams. Unfortunately, a serious injury
          prevented me from continuing.
@@ -50,4 +56,5 @@ presentation skills. I presented a poster of my work at the Intern fair
 at the end of the Summer and presented it at another poster fair for
 UR's Computer Science open house. \[[Cray
 Poster](/assets/CrayPoster.jpg)\] \[[UR Poster](/assets/URPoster.jpg)\]
-
+## Intern, Intelligent and Scalable Systems Research Experience for Undergrads (REU), Lehigh University, Summer 2018
+Briefly, I wrote several LLVM passes 
