@@ -4,19 +4,6 @@
 
 layout: home
 ---
-
-[UppsalaPrez1]: /assets/FPGA_pres.pdf
-[IpekPaper]: https://www.cs.rochester.edu/~ipek/hpca16.pdf
-[UppsalaPrez2]: /assets/crypto_presentation.pdf
-[PPaper]: https://www.cse.iitk.ac.in/users/manindra/algebra/primality_v6.pdf
-[ResultPrez]: /assets/LLPP_pres.pdf
-[HodorLink]: https://www.cs.rochester.edu/u/scott/papers/2019_ATC_Hodor.pdf
-[PanteaLink]: https://dl.acm.org/ft_gateway.cfm?id=3328796&type=pdf
-[MemcachedLink]: https://www.memcached.og
-[LehighPrez]: /assets/presentation.pdf
-[CrayPoster]: /assets/CrayPoster.jpg
-[URPoster]: /assets/URPoster.jpg
-
 Hi, I'm Chris, and this is a bit about me. My research interests are
 primarily in the scope of future computing architectures. Right now,
 I'm working on persistent memory key-value stores, but I think analog
@@ -83,7 +70,7 @@ optimized.
 ```cpp
 for(unsigned x = 0; x < x_e; ++x)
   for(unsigned y = 0; y < y_e; ++y)
-    *(mem_location++) = 42;`
+    *(mem_location++) = 42;
 ```
 
 It turns out that there were many more corner cases than I imagined. I
@@ -275,3 +262,16 @@ SIMD instructions to accelerate the computation.
 ## Fall 2017
 
 - Computation and Formal System TA
+
+[UppsalaPrez1]: /assets/FPGA_pres.pdf
+[IpekPaper]: https://www.cs.rochester.edu/~ipek/hpca16.pdf
+[UppsalaPrez2]: /assets/crypto_presentation.pdf
+[PPaper]: https://www.cse.iitk.ac.in/users/manindra/algebra/primality_v6.pdf
+[ResultPrez]: /assets/LLPP_pres.pdf
+[HodorLink]: https://www.cs.rochester.edu/u/scott/papers/2019_ATC_Hodor.pdf
+[PanteaLink]: https://dl.acm.org/ft_gateway.cfm?id=3328796&type=pdf
+[MemcachedLink]: https://www.memcached.og
+[LehighPrez]: /assets/presentation.pdf
+[CrayPoster]: /assets/CrayPoster.jpg
+[URPoster]: /assets/URPoster.jpg
+
