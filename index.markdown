@@ -4,6 +4,18 @@
 
 layout: home
 ---
+Hi, I'm Chris, and this is a bit about me. My research interests are
+primarily in the scope of future computing architectures. Right now,
+I'm working on persistent memory key-value stores, but I think analog
+systems and those with customizable hardware accelerators are really
+neat. I also have a bit of experience with compilers. I think that fits
+in really well with this interest because nobody expects programmers to
+actually directly interface with these futuristic components, it will be
+compilers doing the heavy lifting.
+
+Below is essentially an enlarged version of my CV. If you have any
+questions, feel free to contact me.
+
 # Education
 
 ## Details
@@ -154,9 +166,9 @@ server. I was proud of my work and it seemed to work well. From what
 I've been told, my slave is still running and hasn't been touched since
 I left! 
 
-#Teaching Experience
+# Teaching Experience
 
-##Fall 2019
+## Fall 2019
 
 - Programming Language Design & Implementation - This is the first time
   I've led a workshop for a class. It's been much different than just
@@ -166,7 +178,7 @@ I left!
   ever taken. This is a challenge because of the sheer breadth of the
   material.
 
-##Fall 2018
+## Fall 2018
 
 - Advanced Computer Architecture TA - This felt like a serious job. I
   was responsible for grading a lot more individually, developing
