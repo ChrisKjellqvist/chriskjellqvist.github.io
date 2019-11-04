@@ -64,7 +64,7 @@ really simple task because it was easy to do by hand. I was given
 the following loop and told that this case needs to be regularly
 optimized.
 
-```C++
+```cpp
 for(unsigned x = 0; x < x_e; ++x)
   for(unsigned y = 0; y < y_e; ++y)
     *(mem_location++) = 42;`
@@ -112,7 +112,7 @@ variables that were transactional. If they were used outside of a
 transaction, then we would know. This could help prevent bugs that lead
 to race conditions for instance. Here's a bit of code to demonstrate...
 
-```C++
+```cpp
 // You imply this will only be used in transactions
 TX_PTR(int) my_int = ...;     
 // a while later
@@ -126,7 +126,7 @@ transactional {
 
 And while this is all happening a different thread is doing the
 following.
-```C++
+```cpp
 int a = *my_int; // line 1
 *my_int = a * 7; // line 2
 ```
