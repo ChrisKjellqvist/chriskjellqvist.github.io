@@ -239,7 +239,7 @@ surprised that people seemed interested afterwards and actually asked
 some questions. 
 
 For my Low Level Parallel Programming course, we did not present a
-paper, but instead we [presented](ResultPrez) the results of a
+paper, but instead we [presented](ResultPrezy) the results of a
 course-long project. This project was given to us as a naive, sequential
 implementation of a simulation. Over the course of the semester, I
 transformed it into a lean, mean simulation that used CUDA, OpenMP, and
