@@ -4,3 +4,9 @@
 
 layout: home
 ---
+## Chris
+This is my name
+# Things about me
+My name is Chris.
+
+I like CS.
