@@ -4,7 +4,7 @@
 
 layout: home
 ---
-Education
+# Education
 
 ## Details
 
