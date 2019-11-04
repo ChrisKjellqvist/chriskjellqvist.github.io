@@ -158,10 +158,10 @@ I also gave a [presentation](/assets/presentation.pdf) while I was there.
 ### Current Project
 I am currently working on accelerating
 [Memcached](https://www.memcached.org) using a variety of technologies
-that my group is developing. The first of which is Hodor, a mechanism
-meant to securely provide intra-process communications without the use
-of the
-OS\[[1](https://www.cs.rochester.edu/u/scott/papers/2019_ATC_Hodor.pdf)\].
+that my group is developing. The first of which is 
+[Hodor](https://www.cs.rochester.edu/u/scott/papers/2019_ATC_Hodor.pdf),
+ a mechanism meant to securely provide intra-process communications 
+ without the useof the OS.
 I began this project last Fall (I did not do this in the Spring because
 I studied abroad) and have continued work on it this semester as well.
 We also intend on making memcached persistent using a persistent STM
