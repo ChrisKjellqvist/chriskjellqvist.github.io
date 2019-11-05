@@ -19,7 +19,7 @@ compilers doing the heavy lifting.
 Below is essentially an enlarged version of my CV. If you have any
 questions, feel free to contact me.
 
-# Education
+# Education (#education)
 
 University of Rochester, May 2020
 - Honors B.S. in Computer Science
@@ -140,13 +140,14 @@ transactional {
 // We imply that the comparison of `my_int`, the read, and assignment
 // all appear to happen instantaneously.
 ```
-
 And while this is all happening a different thread is doing the
 following.
 ```cpp
 int a = *my_int; // line 1
 *my_int = a * 7; // line 2
 ```
+
+[link](#education)
 
 The tagging of 'my\_int' implies that any changes to `my\_int`, and any
 operations that rely on a read from it all happen in an instant. While
