@@ -5,17 +5,13 @@ layout: home
 ---
 
 Hi, I'm Chris, and this is a bit about me. My research interests are
-primarily in heterogeneous systems and how to use them. More
-specifically, I'm interested in how programmers will be able to use
-developing computing systems ([analog components][alink], quantum, 
-[pbits][pblink], [etc][etclink]) to accelerate programs and in how
-compilers will be involved.
+primarily in heterogeneous computing systems of all kinds 
+(persistent, approximate, analog, etc) and in the compiler's role in 
+using these components to accelerate programs.
 
-[alink]:https://ieeexplore.ieee.org/document/8416841
-[pblink]:https://arxiv.org/abs/1809.04028
-[etclink]:https://science.sciencemag.org/content/363/6433/1333
+will be involved in this proces of acceleration.
 
-Below is essentially an abridged version of my CV. If you have any
+Below is an extended version of my CV. If you have any
 questions, feel free to contact me.
 
 # Education
@@ -74,24 +70,31 @@ for(unsigned x = 0; x < x_e; ++x)
     *(mem_location++) = 42;
 ```
 
-It turns out that there were many more corner cases than I imagined. I
-learned a ton from this experience, from code style, to git, to
-presentation skills. 
+It turns out that there were many more corner cases than I imagined.
+This turned out to be the perfect project because while simple in
+intuition, there was a serious amount of thought and challenge that came
+in actually implementing my solution. 
+
+Being certain that the upstream pass couldn't handle the job, I started
+by coding my own solution. I then realized my original premise was wrong
+so I put a serious amount of work into re-shaping upstream. After
+further trials I came to realize the most efficient solution was going
+to a combination of both passes. Not only did implementation prove to be
+difficult, but finding the shape of desired solution was a challenge in
+itself.  
 
 When I went to Lehigh (below), I had no training in using LLVM, 
-and when I left, I had only gained what I had learned myself. So then
-when I came to Cray, I still had no formal training in how to use LLVM. 
-At Cray, my colleagues introduced me to tons of tools
-built into LLVM that allowed me to work much more effectively and much
-more idiomatically (Alias Analysis, Scalar Evolution, etc). By the end
-of the Summer, I surprised myself by how much I felt I had improved. 
+and when I left, I left only with what I had learned myself. Cray was a
+much different experience because my colleagues were an enormous help in
+becoming proficient at LLVM. By the end of the summer I surprised myself
+by how much I felt I had learned. 
 
 I presented a [poster][CrayPoster] of my work at the Intern fair
 at the end of the Summer and [again][URPoster] at another poster fair for
 UR's Computer Science open house.
 ## Intern, Intelligent and Scalable Systems Research Experience for Undergrads (REU), Lehigh University, Summer 2018
 
-Briefly put, I wrote several LLVM passes to help provide static separation
+In short, I wrote several LLVM passes to help provide static separation
 of memory properties in C++. 
 
 This program is part of a large series of NSF sponsored programs where
@@ -110,19 +113,19 @@ The system that I worked most on was transactional memory.
 A transaction is a memory operation that appears to happen instantly.
 Here's an analogy to explain:
 
-    Imagine you're moving your furniture from one house to another. The 
-    movers arrive, pack up your favorite recliner, and leave. 
-    Sometime during the day, you get a back ache so you drive home for 
-    lunch to relax on your recliner, but find it gone. Well, if it wasn't 
-    there, it must be at your new house - so you drive there, but it also 
-    wasn't there! You throw up your hands and collapse in defeat. The 
-    movers stopped to get lunch on the way...
+Imagine you're moving your furniture from one house to another. The 
+movers arrive, pack up your favorite recliner, and leave. 
+Sometime during the day, you get a back ache so you drive home for 
+lunch to relax on your recliner, but find it gone. Well, if it wasn't 
+there, it must be at your new house - so you drive there, but it also 
+wasn't there! You throw up your hands and collapse in defeat. The 
+movers stopped to get lunch on the way...
 
-    If the movers moved transactionally, the recliner would move
-    instantaneously from your first house to your second.
+If the movers moved transactionally, the recliner would move
+instantaneously from your first house to your second.
 
-The abstraction of a moving company is that they move things, the
-timing is just an implementation detail. In the same way, you program
+The abstraction of a moving company is that they move things, timing 
+is just an implementation detail. In the same way, you program
 your computer to complete operations with certain abstractions,
 timing also not being one of them. Transactional memory gives the 
 program the impression that your furniture is being moved 
@@ -154,18 +157,18 @@ int a = *my_int; // line 1
 *my_int = a * 7; // line 2
 ```
 
-The tagging of 'my\_int' implies that any changes to `my\_int`, and any
+The tagging of `my_int` implies that any changes to `my\_int`, and any
 operations that rely on a read from it all happen in an instant. While
 the first code block keeps this promise by putting the code in a
 transactional block, the second code block makes non transactional
 changes. Between line 1 and 2, a transaction from the first code block
 could have occurred. Then, when line 2 occurs, it is writing a stale
-value read from line 1. Static separation would preven this from
+value read from line 1. Static separation would prevent this from
 happening by detection at compile time. 
 
 During my time at Lehigh, I also took part in the Pittsburgh
 Supercomputing Center's XSEDE HPC summer boot-camp. During the week long
-ordeal, I learned OpenMP, OpenACC, and MPI and got some experience
+seminar, I learned OpenMP, OpenACC, and MPI and got some experience
 working on a supercomputer. 
 
 While the work of the PhD student eventually [got published][PanteaLink], I was
@@ -183,7 +186,7 @@ variety of technologies that my group is developing. The first of which is
  without the use of the OS.
 I began this project last Fall (I did not do this in the Spring because
 I studied abroad) and have continued work on it this semester as well.
-We also intend on making memcached persistent using a persistent STM
+I intend on making memcached persistent using a persistent STM
 system and a persistent allocator (both awaiting publication).
 
 ### Past Project
@@ -192,14 +195,14 @@ with hardware transactional memory and graph algorithms.
 
 ## System Developer Intern, [Dewire][dlink], Sundsvall, Sweden, Summer 2017
 [dlink]: https://www.dewire.com/
-Briefly, I helped fill in missing tests in their automated testing suite
+In brief, I helped fill in missing tests in their automated testing suite
 for their Android applications. My biggest contribution was definitely
 in developing a testing service so that tests could be run faster.
 
 This was both my first real job (if you don't count camp counselor), and
 my first time developing with any expectation of quality or performance.
 it was a really great experience where I met people I still keep in
-touch with when I visit my grandparents. 
+touch with. 
 
 I won't mention much of the test automation because it was all quite dry
 and standard. The challenging part of the summer was when I had to make
@@ -235,10 +238,7 @@ I left!
 I was not in Rochester during the Spring of 2019, as I was studying
 abroad in Uppsala, Sweden at the University of Uppsala. One of my
 favorate things I noticed about the classes there is that in _every_
-class I had to give a presentation. For my FPGA course, I 
-[presented][UppsalaPrez1] a [paper][IpekPaper] by a UR faculty member,
-Engin Ipek. This paper really contributed to my interest in analog
-computing systems. 
+class I had to give a presentation. 
 
 For my cryptography class, I [presented][UppsalaPrez2] a [paper][PPaper] that 
 was _way_ out of my comfort zone. I had never parsed such complex math
@@ -251,6 +251,12 @@ I went in expecting very little of my presentation, but was mildly
 surprised that people seemed interested afterwards and actually asked
 some questions. In addition to the presentation, I wrote a 
 report that summarized the research in more technical detail.  
+
+For my FPGA course, I 
+[presented][UppsalaPrez1] a [paper][IpekPaper] by a UR faculty member,
+Engin Ipek. This paper really contributed to my interest in analog
+computing systems. 
+
 
 For my Low Level Parallel Programming course, instead of a paper we
 [presented][ResultPrez] the results of a course-long project. 
