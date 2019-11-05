@@ -241,9 +241,9 @@ Engin Ipek. This paper really contributed to my interest in analog
 computing systems. 
 
 For my cryptography class, I [presented][UppsalaPrez2] a [paper][PPaper] that 
-was _way_ out of my comfort zone. I had never read such complex math
-before, but by the end of it, I think I was a bit more acclimated to the
-area. While I thought that my presentation would be a disaster, I was
+was _way_ out of my comfort zone. I had never parsed such complex math
+before, but by the end of it, I had become a atleast a tad more acclimated to the
+area. I went in expecting very little of my presentation, but was mildly
 surprised that people seemed interested afterwards and actually asked
 some questions. In addition to the presentation, I wrote a report that
 summarized the research in more technical detail.  
