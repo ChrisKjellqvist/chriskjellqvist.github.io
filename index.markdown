@@ -1,5 +1,4 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
@@ -49,7 +48,7 @@ University of Rochester, May 2020
 - I currently work with the UR Computational Fluid Dynamics group
   to assist in writing user-defined functions for their
   simulations. 
-- From Fall 2016 to Fall 2018, I ran for the Univeristy's Cross
+- From Fall 2016 to Fall 2018, I ran for the University's Cross
   Country and Track teams. Unfortunately, a serious injury
   prevented me from continuing.
 - Intermittently from Fall 2016 to the Spring of 2018, I was a
@@ -80,7 +79,7 @@ learned a ton from this experience, from code style, to git, to
 presentation skills. 
 
 When I went to Lehigh (below), I had no training in using LLVM, 
-and when I left, I had only gaomed what I had learned myself. So then
+and when I left, I had only gained what I had learned myself. So then
 when I came to Cray, I still had no formal training in how to use LLVM. 
 At Cray, my colleagues introduced me to tons of tools
 built into LLVM that allowed me to work much more effectively and much
@@ -108,25 +107,32 @@ happen.
 The system that I worked most on was transactional memory. 
 
 ### Transactional Memory
-    The idea of a transaction is simple. Imagine you're moving your
-    furniture from one house to another. The moving people arrive, pack up
-    your favorite recliner, and leave. Sometime during the day, you get a
-    back ache so you drive home for lunch to relax on your recliner, but
-    find it gone. Well, if it wasn't there, it must be at your new house -
-    so you drive there. But it also wasn't there! You throw up your hands
-    and segfault. The movers stopped to get lunch on the way...
+A transaction is a memory operation that appears to happen instantly.
+Here's an analogy to explain:
 
-    The abstraction of a moving company is that they move things, the
-    timing is just an implementation detail.
-    In the same way, your computer can take time to make
-    changes (like moving data), but transactional memory gives the program
-    the impression that your furniture is being moved instantaneously.
+    Imagine you're moving your furniture from one house to another. The 
+    movers arrive, pack up your favorite recliner, and leave. 
+    Sometime during the day, you get a back ache so you drive home for 
+    lunch to relax on your recliner, but find it gone. Well, if it wasn't 
+    there, it must be at your new house - so you drive there, but it also 
+    wasn't there! You throw up your hands and collapse in defeat. The 
+    movers stopped to get lunch on the way...
+
+    If the movers moved transactionally, the recliner would move
+    instantaneously from your first house to your second.
+
+The abstraction of a moving company is that they move things, the
+timing is just an implementation detail. In the same way, you program
+your computer to complete operations with certain abstractions,
+timing also not being one of them. Transactional memory gives the 
+program the impression that your furniture is being moved 
+instantaneously.
 
 My contribution was in the topic of static separation of 'transactional'
 variables. I added a program feature that allowed programmers to tag
 variables that were transactional. If they were used outside of a
 transaction, then we would know. This could help prevent bugs that lead
-to race conditions for instance. Here's a bit of code to demonstrate...
+to race conditions, for instance. Here's a bit of code to demonstrate...
 
 ```cpp
 // You imply this will only be used in transactions
@@ -138,7 +144,7 @@ transactional {
   else
     my_int = malloc(...)
 }
-// We imply that the comparison of `my_int`, the read, and assignment
+// We assert that the comparison of `my_int`, the read, and assignment
 // all appear to happen instantaneously.
 ```
 And while this is all happening a different thread is doing the
@@ -158,7 +164,7 @@ value read from line 1. Static separation would preven this from
 happening by detection at compile time. 
 
 During my time at Lehigh, I also took part in the Pittsburgh
-Supercomputing Center's XSEDE HPC summer bootcamp. During the week long
+Supercomputing Center's XSEDE HPC summer boot-camp. During the week long
 ordeal, I learned OpenMP, OpenACC, and MPI and got some experience
 working on a supercomputer. 
 
@@ -174,7 +180,7 @@ I am currently working on accelerating [Memcached][MemcachedLink] using a
 variety of technologies that my group is developing. The first of which is 
 [Hodor][HodorLink],
  a mechanism meant to securely provide intra-process communications 
- without the useof the OS.
+ without the use of the OS.
 I began this project last Fall (I did not do this in the Spring because
 I studied abroad) and have continued work on it this semester as well.
 We also intend on making memcached persistent using a persistent STM
