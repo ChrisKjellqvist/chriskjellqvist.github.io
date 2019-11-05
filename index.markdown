@@ -157,7 +157,7 @@ int a = *my_int; // line 1
 *my_int = a * 7; // line 2
 ```
 
-The tagging of `my_int` implies that any changes to `my\_int`, and any
+The tagging of `my_int` implies that any changes to `my_int`, and any
 operations that rely on a read from it all happen in an instant. While
 the first code block keeps this promise by putting the code in a
 transactional block, the second code block makes non transactional
