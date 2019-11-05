@@ -5,6 +5,9 @@ layout: home
 ---
 
 Hi, I'm Chris, and this is a bit about me. My research interests are
+primarily in the future of heterogeneous systems.  
+
+My research interests are
 primarily in the scope of future computing architectures. Right now,
 I'm working on persistent memory key-value stores, but I think analog
 systems and those with customizable hardware accelerators are really
