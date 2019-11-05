@@ -5,20 +5,17 @@ layout: home
 ---
 
 Hi, I'm Chris, and this is a bit about me. My research interests are
-primarily in the future of heterogeneous systems.  
+primarily in heterogeneous systems and how to use them. More
+specifically, I'm interested in how programmers will be able to use
+developing computing systems ([analog components][alink], quantum, 
+[pbits][pblink], [etc][etclink]) to accelerate programs and in how
+compilers will be involved.
 
-My research interests are
-primarily in the scope of future computing architectures. Right now,
-I'm working on persistent memory key-value stores, but I think analog
-systems and those with customizable hardware accelerators are really
-neat as well.
+[alink]:https://ieeexplore.ieee.org/document/8416841
+[pblink]:https://arxiv.org/abs/1809.04028
+[etclink]:https://science.sciencemag.org/content/363/6433/1333
 
- I also have experience with compilers, which fits
-in well with this interest because nobody expects programmers to
-actually directly interface with these futuristic components, it will be
-compilers doing the heavy lifting.
-
-Below is essentially an enlarged version of my CV. If you have any
+Below is essentially an abridged version of my CV. If you have any
 questions, feel free to contact me.
 
 # Education
