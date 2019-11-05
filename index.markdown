@@ -19,7 +19,7 @@ compilers doing the heavy lifting.
 Below is essentially an enlarged version of my CV. If you have any
 questions, feel free to contact me.
 
-# Education (#education)
+# Education
 
 University of Rochester, May 2020
 - Honors B.S. in Computer Science
@@ -116,8 +116,9 @@ The system that I worked most on was transactional memory.
     so you drive there. But it also wasn't there! You throw up your hands
     and segfault. The movers stopped to get lunch on the way...
 
-    The concept of movers is that the move things, having nothing to do
-    with timing. In the same way, your computer can take time to make
+    The abstraction of a moving company is that they move things, the
+    timing is just an implementation detail.
+    In the same way, your computer can take time to make
     changes (like moving data), but transactional memory gives the program
     the impression that your furniture is being moved instantaneously.
 
@@ -146,8 +147,6 @@ following.
 int a = *my_int; // line 1
 *my_int = a * 7; // line 2
 ```
-
-[link](#education)
 
 The tagging of 'my\_int' implies that any changes to `my\_int`, and any
 operations that rely on a read from it all happen in an instant. While
