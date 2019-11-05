@@ -242,18 +242,23 @@ computing systems.
 
 For my cryptography class, I [presented][UppsalaPrez2] a [paper][PPaper] that 
 was _way_ out of my comfort zone. I had never parsed such complex math
-before, but by the end of it, I had become a atleast a tad more acclimated to the
-area. I went in expecting very little of my presentation, but was mildly
+before, but by the end of it, I had become at least a tad more acclimated to the
+area. I didn't prepare a presentation that verbatim explained
+the proof, but instead intended the audience to leave with a little
+better understanding of what primality is, why it's hard, and the
+contribution of the authors. 
+I went in expecting very little of my presentation, but was mildly
 surprised that people seemed interested afterwards and actually asked
-some questions. In addition to the presentation, I wrote a report that
-summarized the research in more technical detail.  
+some questions. In addition to the presentation, I wrote a 
+report that summarized the research in more technical detail.  
 
-For my Low Level Parallel Programming course, we did not present a
-paper, but instead we [presented][ResultPrez] the results of a
-course-long project. This project was given to us as a naive, sequential
+For my Low Level Parallel Programming course, instead of a paper we
+[presented][ResultPrez] the results of a course-long project. 
+This project was given to us as a naive, sequential
 implementation of a simulation. Over the course of the semester, I
 transformed it into a lean, mean simulation that used CUDA, OpenMP, and
-SIMD instructions to accelerate the computation.
+SIMD instructions to accelerate the computation. Some aggressive
+optimizations resulted in some satisfying performance speedups (~1000x).
 
 ## Fall 2018
 
