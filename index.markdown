@@ -4,19 +4,22 @@
 layout: home
 ---
 
-Hi, I'm Chris, and this is a bit about me. My research interests are
+Hi, I'm Chris, and this is a bit about me. I am acurrently a senior at
+the University of Rochester in Rochester, NY and will graduate in May
+2020 with an Honors BS in Computer Science. My research interests are
 primarily in heterogeneous computing systems of all kinds
 (persistent, approximate, analog, etc) and in the compiler's role in
-using these components to accelerate programs.
-
-Below is an extended version of my CV. If you have any questions,
-feel free to contact me.
+using these components to accelerate programs. Upon completion of my
+degree, I am seeking to pursue a Ph.D. in Computer Science with a
+specialization in the aforementioned areas.
 
 # Education
 
 University of Rochester, May 2020
 - Honors B.S. in Computer Science
 - 3.84 Major GPA, 3.69 Cumulative GPA
+- Recipient of the Bausch & Lomb Scholarship, which has been renewed
+  each year for 4 years
 
 ## Coursework
 - Future: Topics in Quantum Computing (295), Honors Thesis,
@@ -38,7 +41,8 @@ University of Rochester, May 2020
 
 ## Extracurriculars
 - For the last 3 years, I have been researching with the CS
-  Systems group, more on that below.
+  Systems group at the University of Rochester, more details provided
+  below under "Programming Experience".
 - I currently work with the UR Computational Fluid Dynamics group
   to assist in writing user-defined functions for their
   simulations.
@@ -53,12 +57,13 @@ University of Rochester, May 2020
 # Programming Experience
 
 ## Compiler R&D Intern, Cray Inc, Summer 2019
-Briefly put, I improved loop idiom optimization in Cray's LLVM based
-compiler by writing my own pass and augmenting existing passes to
-recognize more complex memset, memcpy, and memmove idioms.
+The project I was assigned to work on for this internship involved
+improving the loop idiom optimization in Cray's LLVM based compiler by
+writing my own pass and augmenting existing passes to recognize more
+complex memset, memcpy, and memmove idioms. 
 
-At the beginning of the Summer, I (naively) thought this would be a
-really simple task because it was easy to do by hand. I was given
+At the beginning of the summer, I (naively) thought this would be an
+easy task because it was easy to do by hand. I was given
 the following loop and told that this case needs to be regularly
 optimized.
 
@@ -73,61 +78,51 @@ This turned out to be the perfect project because while simple in
 intuition, there was a serious amount of thought and challenge that came
 in actually implementing my solution.
 
-Being certain that the upstream pass couldn't handle the job, I started
-by coding my own solution. I then realized my original premise was wrong
-so I put a serious amount of work into re-shaping upstream. After
-further trials I came to realize the most efficient solution was going
-to a combination of both passes. Not only did implementation prove to be
-difficult, but finding the shape of desired solution was a challenge in
-itself.
+I originally started by thinking that the easiest path would be writing
+a pass that would manually find anything we were targeting - the
+upstream pass couldn't handle it. After a month and I finally had
+something that worked, I realized that the upstream pass was much more
+capable than I expected. It's important that I started this way though
+because working on my own pass taught me enough to understand what the
+upstream code was doing.
 
-When I went to Lehigh (below), I had no training in using LLVM,
-and when I left, I left only with what I had learned myself. Cray was a
-much different experience because my colleagues were an enormous help in
-becoming proficient at LLVM. By the end of the summer I surprised myself
-by how much I felt I had learned.
+My understanding of the upstream pass distressed me greatly because it
+meant I might have to throw away the last month of work. Thankfully for
+my sanity, it turned out in the end that we needed both passes to get
+everything right. Coming in on the last day to see the successful
+results from our performance benchmarks was a surreal experience.  
+
+While I had gained some introductory experience in LLVM through my
+internship at Lehigh University during the prior summer, it was limited.
+The work I did at Cray definitely helped me make huge strides in my
+understanding of LLVM. The biggest reason for my growth at Cray, was the
+generous help from my colleagues, who helped me in everything from Git
+to LLVM (as you might expect) to recreational math.
 
 I presented a [poster][CrayPoster] of my work at the Intern fair
 at the end of the Summer and [again][URPoster] at another poster fair for
 UR's Computer Science open house.
+
 ## Intern, Intelligent and Scalable Systems Research Experience for Undergrads (REU), Lehigh University, Summer 2018
 
-In short, I wrote several LLVM passes to help provide static separation
-of memory properties in C++.
+In this internship, I wrote several LLVM passes to helped provide static
+separation of memory with certain properties in C++.
 
-This program is part of a large series of NSF sponsored programs where
-undergraduate students work and research during the Summer on projects
-all over the nation. I chose to work on a language feature project that
-concerned itself with the future complications promised by heterogeneous
-systems: with more and more features that a system can offer, the
-programmer will become less and less able to take full advantage of
-their system. The beauty of languages is that they are able to abstract
-away from the hardware and provide a high-level command of what is to
-happen.
+This [program][LehighNSFLink] is part of a large series of NSF sponsored 
+programs in which undergraduate students work and research during the
+summer on project all over the nation. I chose to work on a language
+feature project that concerned itself with the future complications
+posed by increasingly heterogeneous systems: with more and more feature
+bloat in a system, a programmer become less and less able to fully take
+advantage of their system. The beauty of languages is that they are able
+to abstract away from the hardware and provide a high-altitude overview of
+what is to happen. 
 
 The system that I worked most on was transactional memory.
 
 ### Transactional Memory
-A transaction is a memory operation that appears to happen instantly.
-Here's an analogy to explain:
-
-Imagine you're moving your furniture from one house to another. The
-movers arrive, pack up your favorite recliner, and leave.
-Sometime during the day, you get a back ache so you drive home for
-lunch to relax on your recliner, but find it gone. Well, if it wasn't
-there, it must be at your new house - so you drive there, but it also
-wasn't there! You throw up your hands and collapse in defeat. The
-movers stopped to get lunch on the way...
-
-If the movers moved transactionally, the recliner would move
-instantaneously from your first house to your second.
-
-The abstraction of a moving company is that they move things, timing
-is just an implementation detail. In the same way, you program
-your computer to complete operations with certain abstractions,
-timing also not being one of them. Transactional memory gives the
-program the impression that your furniture is being moved
-instantaneously.
+A transaction is a memory operation that appears to happen instantly,
+and can produce a consistent history of actions.  
 
 My contribution was in the topic of static separation of 'transactional'
 variables. I added a program feature that allowed programmers to tag
@@ -146,7 +141,7 @@ transactional {
     my_int = malloc(...)
 }
 // We assert that the comparison of `my_int`, the read, and assignment
-// all appear to happen instantaneously.
+// will happen transactionally.
 ```
 And while this is all happening a different thread is doing the
 following.
@@ -164,15 +159,14 @@ could have occurred. Then, when line 2 occurs, it is writing a stale
 value read from line 1. Static separation would prevent this from
 happening by detection at compile time.
 
+The intended effect is similar to the `const` keyword where const
+things can not be made non-const and not passed to anything that does
+not explicitely expect its argument to be const.
+
 During my time at Lehigh, I also took part in the Pittsburgh
 Supercomputing Center's XSEDE HPC summer boot-camp. During the week long
 seminar, I learned OpenMP, OpenACC, and MPI and got some experience
 working on a supercomputer.
-
-While the work of the PhD student eventually [got published][PanteaLink], I was
-unable to contribute because I left long before the actual publications.
-
-I also gave a [presentation][LehighPrez] while I was there.
 
 ## Researcher, University of Rochester, Fall 2018 to Present
 
@@ -197,13 +191,7 @@ In brief, I helped fill in missing tests in their automated testing suite
 for their Android applications. My biggest contribution was definitely
 in developing a testing service so that tests could be run faster.
 
-This was both my first real job (if you don't count camp counselor), and
-my first time developing with any expectation of quality or performance.
-it was a really great experience where I met people I still keep in
-touch with.
-
-I won't mention much of the test automation because it was all quite dry
-and standard. The challenging part of the summer was when I had to make
+The challenging part of the summer was when I had to make
 the testing robot. The intent was to be able to have a testing slave
 that would be capable of running all the tests on all of the connected
 devices simultaneously. We used many devices for tests because they were
@@ -224,9 +212,7 @@ I left!
 ## Fall 2019
 
 - Programming Language Design & Implementation - This is the first time
-  I've led a workshop for a class. It's been much different than just
-  grading and holding office hours. Certainly much harder, but I've
-  learned a lot more
+  I've led a workshop for a class. 
 - Volunteer Tutor - Twice a week I hold office hours for any class I've
   ever taken. This is a challenge because of the sheer breadth of the
   material.
@@ -294,4 +280,5 @@ optimizations resulted in some satisfying performance speedups (~1000x).
 [LehighPrez]: /assets/presentation.pdf
 [CrayPoster]: /assets/CrayPoster.jpg
 [URPoster]: /assets/URPoster.jpg
+[LehighNSFLink]: https://www.nsf.gov/awardsearch/showAward?AWD_ID=1757787
 
