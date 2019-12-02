@@ -4,7 +4,7 @@
 layout: home
 ---
 
-Hi, I'm Chris, and this is a bit about me. I am acurrently a senior at
+Hi, I'm Chris, and this is a bit about me. I am currently a senior at
 the University of Rochester in Rochester, NY and will graduate in May
 2020 with an Honors BS in Computer Science. My research interests are
 primarily in heterogeneous computing systems of all kinds
@@ -33,7 +33,7 @@ University of Rochester, May 2020
       (252), Computation and Formal Systems (173), Linear Algebra and
       Differential Equations (MTH 165), Data Structures and Algorithms
       (172), Discrete Math (MTH 150), Cryptography (Uppsala)
-- ECE: Advanced Computer Archecture (ECE 201), Logic Design (ECE 112),
+- ECE: Advanced Computer Architecture (ECE 201), Logic Design (ECE 112),
        Accelerating Systems with Programmable Logic Components (Uppsala)
 - Art: Introduction to Painting, Introduction to Drawing
 - History: Modern Japan (HIS145), Latin America through Soccer (HIS154),
@@ -161,7 +161,7 @@ happening by detection at compile time.
 
 The intended effect is similar to the `const` keyword where const
 things can not be made non-const and not passed to anything that does
-not explicitely expect its argument to be const.
+not explicitly expect its argument to be const.
 
 During my time at Lehigh, I also took part in the Pittsburgh
 Supercomputing Center's XSEDE HPC summer boot-camp. During the week long
@@ -212,29 +212,33 @@ I left!
 ## Fall 2019
 
 - Programming Language Design & Implementation - This is the first time
-  I've led a workshop for a class. 
-- Volunteer Tutor - Twice a week I hold office hours for any class I've
-  ever taken. This is a challenge because of the sheer breadth of the
-  material.
+  I've led a workshop for a class. This has been a much different
+  experience than I expected. Motivating students to interact with
+  each other in a productive way every Sunday is not an easy task, but
+  it's been an interesting challenge and I've learned a lot from it. I
+  have a Thursday workshop as well which is much more manageable.  
+- Volunteer Tutor - Twice a week I hold office hours for any CS course
+  I've ever taken. This is a challenge because of the sheer breadth of 
+  the material.
 
 ## Spring 2019
 
 I was not in Rochester during the Spring of 2019, as I was studying
 abroad in Uppsala, Sweden at the University of Uppsala. One of my
-favorate things I noticed about the classes there is that in _every_
-class I had to give a presentation.
+favorite things about classes here is that I was required to give a
+presentation in _every_ class.
 
 For my cryptography class, I [presented][UppsalaPrez2] a [paper][PPaper] that
 was _way_ out of my comfort zone. I had never parsed such complex math
 before, but by the end of it, I had become at least a tad more acclimated to the
-area. I didn't prepare a presentation that verbatim explained
-the proof, but instead intended the audience to leave with a little
-better understanding of what primality is, why it's hard, and the
-contribution of the authors.
-I went in expecting very little of my presentation, but was mildly
-surprised that people seemed interested afterwards and actually asked
-some questions. In addition to the presentation, I wrote a
-report that summarized the research in more technical detail.
+area. 
+Given the complex subject matter, it wasn't possible to explain the
+proof comprehensively. Instead, my goal was to give the audience a
+better understanding of what primality is, why it is hard, and the
+contributions of the authors. I was pleased (and a little surprised)
+that people seemed genuinely interested and asked some good questions
+afterwards. In addition to the presentation I wrote a report that
+summarized the research in more technical detail. 
 
 For my FPGA course, I
 [presented][UppsalaPrez1] a [paper][IpekPaper] by a UR faculty member,
@@ -242,7 +246,7 @@ Engin Ipek. This paper really contributed to my interest in analog
 computing systems.
 
 
-For my Low Level Parallel Programming course, instead of a paper we
+For my Low Level Parallel Programming course, we
 [presented][ResultPrez] the results of a course-long project.
 This project was given to us as a naive, sequential
 implementation of a simulation. Over the course of the semester, I
@@ -257,8 +261,7 @@ optimizations resulted in some satisfying performance speedups (~1000x).
   projects for the students and my input was considered in assigning
   grades. The audience for office hours was much different than my
   earlier classes because the material itself was much more challenging
-  and oriented more towards grad students. This has been my favorite
-  class to TA.
+  and oriented more towards grad students.
 
 ## Spring 2018
 
